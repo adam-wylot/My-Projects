@@ -1,0 +1,21 @@
+﻿<Window x:Class="ProgramKalkulacyjnyGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProgramKalkulacyjnyGUI"
+        mc:Ignorable="d"
+        Title="Menu" Height="370" Width="310" Background="#f1b060"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="SingleBorderWindow">
+    <Grid>
+        <Button Content="Nowy plik" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Click="New_Button_Click" Width="74"/>
+
+        <Button Content="Wczytaj plik" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top" Click="Load_Button_Click" Width="74"/>
+        <TextBox x:Name="loadTb" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,55,0,0" Width="255" Height="18"/>
+        <Button Content="..." HorizontalAlignment="Left" Margin="265,55,0,0" VerticalAlignment="Top" Click="Search_For_Path_Button_Click" Width="21" Height="18" RenderTransformOrigin="1.905,0.447"/>
+
+        <Label Content="Ostatnio używane projekty:" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="recentProjectsListBox" Margin="10,136,10,10" MouseDoubleClick="recentProjectsListBox_MouseDoubleClick"/>
+
+    </Grid>
+</Window>

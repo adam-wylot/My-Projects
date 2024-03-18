@@ -1,0 +1,17 @@
+﻿<Window x:Class="SystemMagazynowyGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SystemMagazynowyGUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="232" Width="330">
+    <Grid>
+        <Button Tag="dodaj" Content="Dodaj Towar" HorizontalAlignment="Center" Margin="0,12,0,0" VerticalAlignment="Top" Height="29" Width="82" Click="Button_Click"/>
+        <Button Tag="edytuj" Content="Edytuj Towar" HorizontalAlignment="Center" Margin="0,46,0,0" VerticalAlignment="Top" Height="29" Width="82" Click="Button_Click"/>
+        <Button Tag="usun" Content="Usuń Towar" HorizontalAlignment="Center" Margin="0,80,0,0" VerticalAlignment="Top" Height="29" Width="82" Click="Button_Click"/>
+        <Button Tag="towary" Content="Towary" HorizontalAlignment="Center" Margin="0,114,0,0" VerticalAlignment="Top" Height="29" Width="82" Click="Button_Click"/>
+        <Button Tag="zamowienia" Content="Zamówienia" HorizontalAlignment="Center" Margin="0,148,0,0" VerticalAlignment="Top" Height="29" Width="82" Click="Button_Click"/>
+
+    </Grid>
+</Window>

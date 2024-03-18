@@ -1,0 +1,112 @@
+﻿<Window x:Class="ProgramKalkulacyjnyGUI.CalculationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProgramKalkulacyjnyGUI"
+        mc:Ignorable="d"
+        Title="Okno Kalkulacyjne" Height="700" Width="1200"
+        MinHeight="700" MinWidth="1200" SizeChanged="Window_SizeChanged" WindowStartupLocation="CenterScreen">
+    <Grid x:Name="mainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+            <ColumnDefinition Width="190"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="18"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid x:Name="taskbarGrid_Top" Grid.ColumnSpan="4" Background="#f19b30">
+            <Button x:Name="saveBt" Background="White" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="46" Width="60" Click="Save_Button_Click">
+                <Image x:Name="saveBtImage"></Image>
+            </Button>
+            <Button x:Name="saveAsBt" Content="Zapisz jako..." FontSize="8" FontWeight="Bold" Background="White" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top" Height="14" Width="60" Click="SaveAs_Button_Click"/>
+
+            <Button x:Name="printBt" Background="White" HorizontalAlignment="Left" Margin="75,10,0,0" VerticalAlignment="Top" Height="60" Width="60" Click="printBt_Click">
+                <Image x:Name="printBtImage"></Image>
+            </Button>
+
+        </Grid>
+        <Grid x:Name="taskbarGrid_Bottom" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Background="#f1b060">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="946"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TabControl x:Name="monthsTc" SelectionChanged="MonthsTc_SelectionChanged">
+                <TabItem Header="Styczeń" Width="72"/>
+                <TabItem Header="Luty" Width="72"/>
+                <TabItem Header="Marzec" Width="72"/>
+                <TabItem Header="Kwiecień" Width="72"/>
+                <TabItem Header="Maj" Width="72"/>
+                <TabItem Header="Czerwiec" Width="72"/>
+                <TabItem Header="Lipiec" Width="72"/>
+                <TabItem Header="Sierpień" Width="72"/>
+                <TabItem Header="Wrzesień" Width="72"/>
+                <TabItem Header="Październik" Width="72"/>
+                <TabItem Header="Listopad" Width="72"/>
+                <TabItem Header="Grudzień" Width="72"/>
+                <TabItem Header="Podliczenie" Width="78" FontWeight="Bold"/>
+            </TabControl>
+
+            <ScrollBar x:Name="scrollBar" Grid.Column="1" Orientation="Horizontal" Margin="10,0,15,0" Minimum="0" ValueChanged="ScrollBar_ValueChanged"/>
+        </Grid>
+
+        <Grid x:Name="taskbarGrid_Left" Grid.Row="1" Grid.RowSpan="2" Background="#f1b060">
+
+        </Grid>
+
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"></ColumnDefinition>
+                    <ColumnDefinition Width="160"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <RichTextBox x:Name="mainTb" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="15" FontWeight="Bold"/>
+
+                <TextBox Text="LP" Grid.Row="1" Grid.Column="0" TextAlignment="Center" TextWrapping="Wrap" Background="LightGray" IsReadOnly="True"/>
+                <TextBox Text="Nazwisko" Grid.Row="1" Grid.Column="1" TextAlignment="Center" TextWrapping="Wrap" Background="LightGray" IsReadOnly="True"/>
+            </Grid>
+
+            <ScrollViewer x:Name="nameSCV" Grid.Row="1" VerticalScrollBarVisibility="Hidden" ScrollChanged="NameSCV_ScrollChanged" >
+                <Grid x:Name="nameGrid"></Grid>
+            </ScrollViewer>
+        </Grid>
+
+        <Grid Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <ScrollViewer x:Name="descrSCV" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Hidden" CanContentScroll="true">
+                
+            </ScrollViewer>
+
+            <ScrollViewer x:Name="calculationSCV" Grid.Row="1" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto" ScrollChanged="ScrollViewer_ScrollChanged">
+                <Grid x:Name="calculationGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0" x:Name="freeSpaceRD"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Button x:Name="newSectionButton" Grid.Row="2" Height="15" VerticalAlignment="Top" Background="BlanchedAlmond" Click="New_Section_Button_Click"/>
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+
+    </Grid>
+</Window>

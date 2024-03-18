@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="MoviesListGUI.Controls.RateControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MoviesListGUI.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="80" d:DesignWidth="260">
+    <Grid x:Name="circles">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Ellipse Width="50" Height="50" Grid.Column="0" Fill="white" Tag="0" MouseEnter="Ellipse_MouseEnter" StrokeThickness="2" Stroke="Black" MouseLeave="Ellipse_MouseLeave" MouseLeftButtonDown="Ellipse_MouseLeftButtonDown" ></Ellipse>
+        <Ellipse Width="50" Height="50" Grid.Column="1" Fill="white" Tag="1" MouseEnter="Ellipse_MouseEnter" StrokeThickness="2" Stroke="Black" MouseLeave="Ellipse_MouseLeave" MouseLeftButtonDown="Ellipse_MouseLeftButtonDown" ></Ellipse>
+        <Ellipse Width="50" Height="50" Grid.Column="2" Fill="white" Tag="2" MouseEnter="Ellipse_MouseEnter" StrokeThickness="2" Stroke="Black" MouseLeave="Ellipse_MouseLeave" MouseLeftButtonDown="Ellipse_MouseLeftButtonDown" ></Ellipse>
+        <Ellipse Width="50" Height="50" Grid.Column="3" Fill="white" Tag="3" MouseEnter="Ellipse_MouseEnter" StrokeThickness="2" Stroke="Black" MouseLeave="Ellipse_MouseLeave" MouseLeftButtonDown="Ellipse_MouseLeftButtonDown" ></Ellipse>
+        <Ellipse Width="50" Height="50" Grid.Column="4" Fill="white" Tag="4" MouseEnter="Ellipse_MouseEnter" StrokeThickness="2" Stroke="Black" MouseLeave="Ellipse_MouseLeave" MouseLeftButtonDown="Ellipse_MouseLeftButtonDown" ></Ellipse>
+    </Grid>
+</UserControl>

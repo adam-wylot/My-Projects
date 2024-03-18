@@ -1,0 +1,16 @@
+int fa( int );
+int fb( int );
+
+  int main( ) {
+  int i= 5;
+  printf( "funkcjaa(%i)=%i", i, fa(i) );
+  printf( "funkcjab(%i)=%i", i, fb(i) );
+  printf( "funkcjac(%i)=%i", i, fc(i) );
+  printf( "jeszcze raz funkcjab(%i)=%i", i, fb(i) );
+  return 0;
+}
+
+int fb( int x ) {
+  x= fc(x);
+  return 2*fa(x);
+}

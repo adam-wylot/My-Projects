@@ -1,0 +1,18 @@
+﻿<Window x:Class="SystemMagazynowyGUI.Okna.ListaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SystemMagazynowyGUI.Okna"
+        mc:Ignorable="d"
+        Title="ListaWindow" Height="477" Width="800">
+    <Grid>
+        <ListBox x:Name="lista" Margin="10,10,10,69"/>
+        
+        <ComboBox x:Name="comboBox" Visibility="Hidden" HorizontalAlignment="Left" Margin="10,405,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox_SelectionChanged"/>
+        <Label x:Name="label" Visibility="Hidden" Content="Sortuj po:" HorizontalAlignment="Left" Margin="10,379,0,0" VerticalAlignment="Top"/>
+
+        <Button x:Name="button" Visibility="Hidden" Content="Zrealizuj" HorizontalAlignment="Left" Margin="590,384,0,0" VerticalAlignment="Top" Height="41" Width="179" Click="Button_Click"/>
+
+    </Grid>
+</Window>

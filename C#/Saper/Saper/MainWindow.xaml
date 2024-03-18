@@ -1,0 +1,22 @@
+﻿<Window x:Class="Saper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Saper"
+        mc:Ignorable="d"
+        Title="Saper" Height="250" Width="200">
+    <Grid x:Name="mainGrid">
+        <Label x:Name="l_map" Content="20x20" HorizontalAlignment="Left" Margin="30,84,0,0" VerticalAlignment="Top" FontSize="8" FontStyle="Italic" Height="19" Width="38"/>
+        <Label x:Name="l_rcmd" Content="Recommended: 100" HorizontalAlignment="Left" Margin="106,84,0,0" VerticalAlignment="Top" FontSize="8" FontStyle="Italic" Height="38" />
+
+        <Label Content="Map size:" HorizontalAlignment="Left" Margin="16,49,0,156"/>
+        <TextBox x:Name="sizeTextBox" HorizontalAlignment="Left" Margin="24,69,0,0" TextWrapping="Wrap" Text="20" VerticalAlignment="Top" Width="44" TextChanged="tb_size_TextChanged"/>
+
+        <Label Content="Bombs Amount:" HorizontalAlignment="Left" Margin="97,49,0,156"/>
+        <TextBox x:Name="bombsTextBox" HorizontalAlignment="Left" Margin="120,69,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="50"/>
+
+        <Button Content="Start" HorizontalAlignment="Center" Margin="0,164,0,0" VerticalAlignment="Top" Height="51" Width="154" Click="Start_Button_Click"/>
+
+    </Grid>
+</Window>

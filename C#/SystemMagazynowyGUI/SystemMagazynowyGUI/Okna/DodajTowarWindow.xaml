@@ -1,0 +1,28 @@
+﻿<Window x:Class="SystemMagazynowyGUI.Okna.DodajTowarWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SystemMagazynowyGUI.Okna"
+        mc:Ignorable="d"
+        Title="DodajTowarWindow" Height="307" Width="437">
+    <Grid>
+        <TextBox x:Name="kodTb" HorizontalAlignment="Left" Margin="45,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Kod towaru:" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top"/>
+
+        <TextBox x:Name="nazwaTb" HorizontalAlignment="Left" Margin="45,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Nazwa:" HorizontalAlignment="Left" Margin="25,59,0,0" VerticalAlignment="Top"/>
+
+        <TextBox x:Name="gwarancjaTb" HorizontalAlignment="Left" Margin="45,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Data gwarancji:" HorizontalAlignment="Left" Margin="25,108,0,0" VerticalAlignment="Top"/>
+
+        <ComboBox x:Name="typesCb" HorizontalAlignment="Left" Margin="45,183,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Typ towaru:" HorizontalAlignment="Left" Margin="25,157,0,0" VerticalAlignment="Top"/>
+
+        <TextBox x:Name="iloscTb" HorizontalAlignment="Left" Margin="45,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Ilość:" HorizontalAlignment="Left" Margin="25,210,0,0" VerticalAlignment="Top"/>
+        
+        <Button x:Name="bt" Content="Dodaj" HorizontalAlignment="Left" Margin="256,212,0,0" VerticalAlignment="Top" Height="38" Width="131" Click="Button_Click"/>
+
+    </Grid>
+</Window>
