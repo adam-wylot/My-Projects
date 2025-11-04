@@ -1,6 +1,6 @@
 Hi,
 I am a student of Computer Science and Information Systems at Warsaw University of Technology.
-You may find there some of my private and university projects.
+You may find here some of my private and university projects.
 
 
 
